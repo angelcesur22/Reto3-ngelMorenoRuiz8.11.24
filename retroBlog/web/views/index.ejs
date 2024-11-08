@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>RetroBlog</title>
+</head>
+<body>
+  <header>
+    <h1>RetroBlog</h1>
+    <p>Un blog para amantes del retro</p>
+  </header>
+  <nav>
+    <a href="/">Inicio</a>
+    <a href="/categorias">Categorías</a>
+  </nav>
+  <main>
+    <h2>Últimas entradas del blog</h2>
+    <div class="entradas">
+      <% entradas.forEach(entrada => { %>
+        <div class="tarjeta">
+          <a href="/entrada/<%= entrada.id %>">
+            <img src="<%= entrada.thumbnail %>" alt="<%= entrada.title %>">
+            <div class="texto-tarjeta">
+              <h3><%= entrada.title %></h3>
+            </div>
+          </a>
+        </div>
+      <% }) %>
+    </div>
+    
+  </main>
+  <footer>
+    <p>Creado por Álvaro Espinar</p>
+  </footer>
+</body>
+</html>
+

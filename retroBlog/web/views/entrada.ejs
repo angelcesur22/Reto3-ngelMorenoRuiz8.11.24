@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title><%= entrada.title %></title>
+</head>
+<body>
+  <header>
+    <h1>RetroBlog</h1>
+    <p>Un blog para amantes del retro</p>
+  </header>
+  <nav>
+    <a href="/">Inicio</a>
+    <a href="/categorias">Categorías</a>
+  </nav>
+  <main>
+    <h2><%= entrada.title %></h2>
+    <img src="<%= entrada.image %>" alt="<%= entrada.title %>">
+    <p><%= entrada.content %></p>
+  </main>
+  <footer>
+    <p>Created by Ángel Moreno </p>
+  </footer>
+</body>
+</html>
